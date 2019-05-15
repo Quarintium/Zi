@@ -50,13 +50,11 @@ namespace ZijaevPV
                 q += "\n\nINSERT INTO public.e_v_whose_vulnerability (number_e, number_v) " +
                     "VALUES ((select number_e from elements_storage where name_e = '" + checkedListBox1.CheckedItems[i].ToString() + "')" +
                     ", (select number_v from vulnerability where name_v = '" + name_TB.Text + "'));";
-                //(select max(number_v) from vulnerability));";
             }
             NpgsqlConnection conn = new NpgsqlConnection(connStr);
             NpgsqlCommand command2;
             command2 = new NpgsqlCommand(q, conn);
             conn.Open();
-            // Выполнение запроса
             command2.ExecuteNonQuery();
             conn.Close();
 
