@@ -14,7 +14,141 @@ namespace ZijaevPV
 
             NpgsqlConnection conn = new NpgsqlConnection(connStr);
             NpgsqlCommand command2;
-            string q = "select * from elements_storage where type_of_e = 'дисковой массив'";
+            ReloadZn();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string q = @"select 0.8 *
+(select round((fun('" + uhd_t1_1.Text + "', " +s(numericUpDown1.Value) + ") + fun('" + uhd_t1_2.Text + "', " + s(numericUpDown2.Value) + ") + " +
+                "fun('" + k_t1_1.Text + "', " + s(numericUpDown3.Value) + ") + fun('" + k_t1_2.Text + "'," + s(numericUpDown4.Value) + ") + " +
+                "fun('" + s_t1_1.Text + "', " + s(numericUpDown5.Value) + ") + fun('" + s_t1_2.Text + "', " + s(numericUpDown6.Value) + @")) / 6.0, 2)) as top1,
+0.8 *
+(select round((fun('" + comboBox5.Text + "', " + s(numericUpDown12.Value) + ") + fun('" + comboBox6.Text + "', " + s(numericUpDown11.Value) + ") + " +
+                "fun('" + comboBox4.Text + "', " + s(numericUpDown10.Value) + ") + fun('" + comboBox3.Text + "'," + s(numericUpDown9.Value) + ") + " +
+                "fun('" + comboBox2.Text + "', " + s(numericUpDown8.Value) + @")) / 5.0, 2)) as top2,
+0.8 *
+(select round((fun('" + comboBox11.Text + "', " + s(numericUpDown18.Value) + ") + fun('" + comboBox12.Text + "', " + s(numericUpDown17.Value) + ") + " +
+                "fun('" + comboBox10.Text + "', " + s(numericUpDown16.Value) + ") + fun('" + comboBox8.Text + "'," + s(numericUpDown14.Value) + ") + " +
+                "fun('" + comboBox7.Text + "', " + s(numericUpDown13.Value) + @")) / 5.0, 2)) as top3,
+0.9 *
+(select round((fun('" + comboBox2.Text + "', " + s(numericUpDown24.Value) + ") + fun('" + comboBox16.Text + "', " + s(numericUpDown22.Value) + ") + " +
+                "fun('" + comboBox14.Text + "', " + s(numericUpDown21.Value) + ") + fun('" + comboBox13.Text + "'," + s(numericUpDown20.Value) + @")) / 4.0, 2)) as top4,
+0.8 *
+(select round((fun('" + comboBox24.Text + "', " + s(numericUpDown30.Value) + ") + fun('" + comboBox22.Text + "', " + s(numericUpDown28.Value) + ") + " +
+                "fun('" + comboBox21.Text + "', " + s(numericUpDown27.Value) + ") + fun('" + comboBox22.Text + "'," + s(numericUpDown26.Value) + @")) / 4.0, 2)) as top5,
+0.6 *
+(select round((fun('" + comboBox30.Text + "', " + s(numericUpDown36.Value) + ") + fun('" + comboBox29.Text + "', " + s(numericUpDown35.Value) + ") + " +
+                "fun('" + comboBox28.Text + "', " + s(numericUpDown34.Value) + ") + fun('" + comboBox27.Text + "'," + s(numericUpDown33.Value) + ") + " +
+                "fun('" + comboBox26.Text + "', " + s(numericUpDown32.Value) + ") + fun('" + comboBox25.Text + "', " + s(numericUpDown31.Value) + @")) / 6.0, 2)) as top6";
+            NpgsqlConnection conn = new NpgsqlConnection(connStr);
+            NpgsqlCommand command2;
+            command2 = new NpgsqlCommand(q, conn);
+            conn.Open();
+            using (NpgsqlDataReader qqqq = command2.ExecuteReader())
+            {
+                if (qqqq.HasRows)
+                {
+                    foreach (DbDataRecord dbDataRecord in qqqq)
+                    {
+                        rez_r1.Text = rez_t1.Text = Convert.ToString(dbDataRecord["top1"]);
+                        rez_r2.Text = rez_t2.Text = Convert.ToString(dbDataRecord["top2"]);
+                        rez_r3.Text = rez_t3.Text = Convert.ToString(dbDataRecord["top3"]);
+                        rez_r4.Text = rez_t4.Text = Convert.ToString(dbDataRecord["top4"]);
+                        rez_r5.Text = rez_t5.Text = Convert.ToString(dbDataRecord["top5"]);
+                        rez_r6.Text = rez_t6.Text = Convert.ToString(dbDataRecord["top6"]);
+                    }
+                }
+            }
+            conn.Close();
+        }
+
+        string s(decimal f)
+        {
+            string dd = "", buf = "";
+            buf = f.ToString();
+            for (int i =0; i<buf.Length;i++)
+            {
+                if (buf[i] == ',')
+                    dd +='.';
+                else
+                    dd += buf[i];
+            }
+
+            return dd; 
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+        }
+
+        // Добавление дисковых массивов в базу данных
+        private void addUXD_B_Click(object sender, EventArgs e)
+        {
+            // Инициализация формы добавления дисковых массивов в базу данных
+            addElement f = new addElement("дисковой массив");
+            f.ShowDialog();
+            ReloadZn();
+        }
+
+        private void ReloadZn()
+        {
+            string q = "select (select count(*) from elements_storage where type_of_e = 'дисковой массив') as uhd, ";
+            q += "(select count(*) from elements_storage where type_of_e = 'коммутатор') as komm, ";
+            q += "(select count(*) from elements_storage where type_of_e = 'сервер SAN') as serv, ";
+            q += "(select count(*) from vulnerability) as u, ";
+            q += "(select count(*) from threats) as ugr ";
+            NpgsqlConnection conn = new NpgsqlConnection(connStr); ;
+            NpgsqlCommand command2 = new NpgsqlCommand(q, conn);
+            conn.Open();
+            using (NpgsqlDataReader qqqq = command2.ExecuteReader())
+            {
+                if (qqqq.HasRows)
+                {
+                    foreach (DbDataRecord dbDataRecord in qqqq)
+                    {
+                        countUHD_L.Text = Convert.ToString(dbDataRecord["uhd"]);
+                        countComm_L.Text = Convert.ToString(dbDataRecord["komm"]);
+                        countServer_L.Text = Convert.ToString(dbDataRecord["serv"]);
+                        countU_L.Text = Convert.ToString(dbDataRecord["u"]);
+                        countUgr_L.Text = Convert.ToString(dbDataRecord["ugr"]);
+                    }
+                }
+            }
+            conn.Close();
+
+
+            comboBox2.Items.Clear();
+            comboBox8.Items.Clear();
+            comboBox7.Items.Clear();
+            comboBox14.Items.Clear();
+            comboBox13.Items.Clear();
+            comboBox20.Items.Clear();
+            comboBox26.Items.Clear();
+            comboBox25.Items.Clear();
+            uhd_t1_1.Items.Clear();
+            uhd_t1_2.Items.Clear();
+            comboBox5.Items.Clear();
+            comboBox6.Items.Clear();
+            comboBox11.Items.Clear();
+            comboBox12.Items.Clear();
+            comboBox18.Items.Clear();
+            comboBox24.Items.Clear();
+            comboBox30.Items.Clear();
+            comboBox29.Items.Clear();
+            k_t1_1.Items.Clear();
+            k_t1_2.Items.Clear();
+            comboBox4.Items.Clear();
+            comboBox3.Items.Clear();
+            comboBox10.Items.Clear();
+            comboBox16.Items.Clear();
+            comboBox15.Items.Clear();
+            comboBox22.Items.Clear();
+            comboBox21.Items.Clear();
+            comboBox28.Items.Clear();
+            comboBox27.Items.Clear();
+
+            q = "select * from elements_storage where type_of_e = 'дисковой массив'";
             command2 = new NpgsqlCommand(q, conn);
             conn.Open();
             using (NpgsqlDataReader qqqq = command2.ExecuteReader())
@@ -134,107 +268,6 @@ namespace ZijaevPV
             q += "(select count(*) from vulnerability) as u, ";
             q += "(select count(*) from threats) as ugr";
             command2 = new NpgsqlCommand(q, conn);
-            conn.Open();
-            using (NpgsqlDataReader qqqq = command2.ExecuteReader())
-            {
-                if (qqqq.HasRows)
-                {
-                    foreach (DbDataRecord dbDataRecord in qqqq)
-                    {
-                        countUHD_L.Text = Convert.ToString(dbDataRecord["uhd"]);
-                        countComm_L.Text = Convert.ToString(dbDataRecord["komm"]);
-                        countServer_L.Text = Convert.ToString(dbDataRecord["serv"]);
-                        countU_L.Text = Convert.ToString(dbDataRecord["u"]);
-                        countUgr_L.Text = Convert.ToString(dbDataRecord["ugr"]);
-                    }
-                }
-            }
-            conn.Close();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            string q = @"select 0.8 *
-(select round((fun('" + uhd_t1_1.Text + "', " +s(numericUpDown1.Value) + ") + fun('" + uhd_t1_2.Text + "', " + s(numericUpDown2.Value) + ") + " +
-                "fun('" + k_t1_1.Text + "', " + s(numericUpDown3.Value) + ") + fun('" + k_t1_2.Text + "'," + s(numericUpDown4.Value) + ") + " +
-                "fun('" + s_t1_1.Text + "', " + s(numericUpDown5.Value) + ") + fun('" + s_t1_2.Text + "', " + s(numericUpDown6.Value) + @")) / 6.0, 2)) as top1,
-0.8 *
-(select round((fun('" + comboBox5.Text + "', " + s(numericUpDown12.Value) + ") + fun('" + comboBox6.Text + "', " + s(numericUpDown11.Value) + ") + " +
-                "fun('" + comboBox4.Text + "', " + s(numericUpDown10.Value) + ") + fun('" + comboBox3.Text + "'," + s(numericUpDown9.Value) + ") + " +
-                "fun('" + comboBox2.Text + "', " + s(numericUpDown8.Value) + @")) / 5.0, 2)) as top2,
-0.8 *
-(select round((fun('" + comboBox11.Text + "', " + s(numericUpDown18.Value) + ") + fun('" + comboBox12.Text + "', " + s(numericUpDown17.Value) + ") + " +
-                "fun('" + comboBox10.Text + "', " + s(numericUpDown16.Value) + ") + fun('" + comboBox8.Text + "'," + s(numericUpDown14.Value) + ") + " +
-                "fun('" + comboBox7.Text + "', " + s(numericUpDown13.Value) + @")) / 5.0, 2)) as top3,
-0.9 *
-(select round((fun('" + comboBox2.Text + "', " + s(numericUpDown24.Value) + ") + fun('" + comboBox16.Text + "', " + s(numericUpDown22.Value) + ") + " +
-                "fun('" + comboBox14.Text + "', " + s(numericUpDown21.Value) + ") + fun('" + comboBox13.Text + "'," + s(numericUpDown20.Value) + @")) / 4.0, 2)) as top4,
-0.8 *
-(select round((fun('" + comboBox24.Text + "', " + s(numericUpDown30.Value) + ") + fun('" + comboBox22.Text + "', " + s(numericUpDown28.Value) + ") + " +
-                "fun('" + comboBox21.Text + "', " + s(numericUpDown27.Value) + ") + fun('" + comboBox22.Text + "'," + s(numericUpDown26.Value) + @")) / 4.0, 2)) as top5,
-0.6 *
-(select round((fun('" + comboBox30.Text + "', " + s(numericUpDown36.Value) + ") + fun('" + comboBox29.Text + "', " + s(numericUpDown35.Value) + ") + " +
-                "fun('" + comboBox28.Text + "', " + s(numericUpDown34.Value) + ") + fun('" + comboBox27.Text + "'," + s(numericUpDown33.Value) + ") + " +
-                "fun('" + comboBox26.Text + "', " + s(numericUpDown32.Value) + ") + fun('" + comboBox25.Text + "', " + s(numericUpDown31.Value) + @")) / 6.0, 2)) as top6";
-            NpgsqlConnection conn = new NpgsqlConnection(connStr);
-            NpgsqlCommand command2;
-            command2 = new NpgsqlCommand(q, conn);
-            conn.Open();
-            using (NpgsqlDataReader qqqq = command2.ExecuteReader())
-            {
-                if (qqqq.HasRows)
-                {
-                    foreach (DbDataRecord dbDataRecord in qqqq)
-                    {
-                        rez_r1.Text = rez_t1.Text = Convert.ToString(dbDataRecord["top1"]);
-                        rez_r2.Text = rez_t2.Text = Convert.ToString(dbDataRecord["top2"]);
-                        rez_r3.Text = rez_t3.Text = Convert.ToString(dbDataRecord["top3"]);
-                        rez_r4.Text = rez_t4.Text = Convert.ToString(dbDataRecord["top4"]);
-                        rez_r5.Text = rez_t5.Text = Convert.ToString(dbDataRecord["top5"]);
-                        rez_r6.Text = rez_t6.Text = Convert.ToString(dbDataRecord["top6"]);
-                    }
-                }
-            }
-            conn.Close();
-        }
-
-        string s(decimal f)
-        {
-            string dd = "", buf = "";
-            buf = f.ToString();
-            for (int i =0; i<buf.Length;i++)
-            {
-                if (buf[i] == ',')
-                    dd +='.';
-                else
-                    dd += buf[i];
-            }
-
-            return dd; 
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-        }
-
-        // Добавление дисковых массивов в базу данных
-        private void addUXD_B_Click(object sender, EventArgs e)
-        {
-            // Инициализация формы добавления дисковых массивов в базу данных
-            addElement f = new addElement("дисковой массив");
-            f.ShowDialog();
-            ReloadZn();
-        }
-
-        private void ReloadZn()
-        {
-            string q = "select (select count(*) from elements_storage where type_of_e = 'дисковой массив') as uhd, ";
-            q += "(select count(*) from elements_storage where type_of_e = 'коммутатор') as komm, ";
-            q += "(select count(*) from elements_storage where type_of_e = 'сервер SAN') as serv, ";
-            q += "(select count(*) from vulnerability) as u, ";
-            q += "(select count(*) from threats) as ugr ";
-            NpgsqlConnection conn = new NpgsqlConnection(connStr); ;
-            NpgsqlCommand command2 = new NpgsqlCommand(q, conn);
             conn.Open();
             using (NpgsqlDataReader qqqq = command2.ExecuteReader())
             {
