@@ -197,6 +197,26 @@
             this.label63 = new System.Windows.Forms.Label();
             this.rez_r1 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
+            this.price6_L = new System.Windows.Forms.Label();
+            this.price5_L = new System.Windows.Forms.Label();
+            this.price4_L = new System.Windows.Forms.Label();
+            this.price3_L = new System.Windows.Forms.Label();
+            this.price2_L = new System.Windows.Forms.Label();
+            this.price1_L = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.price1_L6 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.price1_L5 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.price1_L4 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.price1_L3 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.price1_L2 = new System.Windows.Forms.Label();
+            this.label66 = new System.Windows.Forms.Label();
+            this.price1_L1 = new System.Windows.Forms.Label();
             this.dfgh.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -493,6 +513,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label66);
+            this.tabPage2.Controls.Add(this.price1_L1);
             this.tabPage2.Controls.Add(this.numericUpDown6);
             this.tabPage2.Controls.Add(this.numericUpDown5);
             this.tabPage2.Controls.Add(this.numericUpDown4);
@@ -797,6 +819,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label56);
+            this.tabPage3.Controls.Add(this.price1_L2);
             this.tabPage3.Controls.Add(this.numericUpDown8);
             this.tabPage3.Controls.Add(this.numericUpDown9);
             this.tabPage3.Controls.Add(this.numericUpDown10);
@@ -1061,6 +1085,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label50);
+            this.tabPage4.Controls.Add(this.price1_L3);
             this.tabPage4.Controls.Add(this.numericUpDown13);
             this.tabPage4.Controls.Add(this.numericUpDown14);
             this.tabPage4.Controls.Add(this.numericUpDown16);
@@ -1324,6 +1350,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.label36);
+            this.tabPage5.Controls.Add(this.price1_L4);
             this.tabPage5.Controls.Add(this.numericUpDown19);
             this.tabPage5.Controls.Add(this.numericUpDown20);
             this.tabPage5.Controls.Add(this.numericUpDown21);
@@ -1587,6 +1615,8 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.label21);
+            this.tabPage6.Controls.Add(this.price1_L5);
             this.tabPage6.Controls.Add(this.numericUpDown26);
             this.tabPage6.Controls.Add(this.numericUpDown27);
             this.tabPage6.Controls.Add(this.numericUpDown28);
@@ -1809,6 +1839,8 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.label18);
+            this.tabPage7.Controls.Add(this.price1_L6);
             this.tabPage7.Controls.Add(this.numericUpDown31);
             this.tabPage7.Controls.Add(this.numericUpDown32);
             this.tabPage7.Controls.Add(this.numericUpDown33);
@@ -2113,6 +2145,14 @@
             // 
             // tabPage8
             // 
+            this.tabPage8.Controls.Add(this.label47);
+            this.tabPage8.Controls.Add(this.label48);
+            this.tabPage8.Controls.Add(this.price6_L);
+            this.tabPage8.Controls.Add(this.price5_L);
+            this.tabPage8.Controls.Add(this.price4_L);
+            this.tabPage8.Controls.Add(this.price3_L);
+            this.tabPage8.Controls.Add(this.price2_L);
+            this.tabPage8.Controls.Add(this.price1_L);
             this.tabPage8.Controls.Add(this.chart2);
             this.tabPage8.Controls.Add(this.chart1);
             this.tabPage8.Controls.Add(this.label41);
@@ -2173,7 +2213,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label41.Location = new System.Drawing.Point(38, 148);
+            this.label41.Location = new System.Drawing.Point(15, 168);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(85, 13);
             this.label41.TabIndex = 34;
@@ -2182,7 +2222,7 @@
             // rez_r6
             // 
             this.rez_r6.AutoSize = true;
-            this.rez_r6.Location = new System.Drawing.Point(138, 148);
+            this.rez_r6.Location = new System.Drawing.Point(115, 168);
             this.rez_r6.Name = "rez_r6";
             this.rez_r6.Size = new System.Drawing.Size(13, 13);
             this.rez_r6.TabIndex = 33;
@@ -2192,7 +2232,7 @@
             // 
             this.label62.AutoSize = true;
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label62.Location = new System.Drawing.Point(38, 127);
+            this.label62.Location = new System.Drawing.Point(15, 147);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(85, 13);
             this.label62.TabIndex = 32;
@@ -2201,7 +2241,7 @@
             // rez_r5
             // 
             this.rez_r5.AutoSize = true;
-            this.rez_r5.Location = new System.Drawing.Point(138, 127);
+            this.rez_r5.Location = new System.Drawing.Point(115, 147);
             this.rez_r5.Name = "rez_r5";
             this.rez_r5.Size = new System.Drawing.Size(13, 13);
             this.rez_r5.TabIndex = 31;
@@ -2211,7 +2251,7 @@
             // 
             this.label75.AutoSize = true;
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label75.Location = new System.Drawing.Point(38, 106);
+            this.label75.Location = new System.Drawing.Point(15, 126);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(85, 13);
             this.label75.TabIndex = 30;
@@ -2220,7 +2260,7 @@
             // rez_r4
             // 
             this.rez_r4.AutoSize = true;
-            this.rez_r4.Location = new System.Drawing.Point(138, 106);
+            this.rez_r4.Location = new System.Drawing.Point(115, 126);
             this.rez_r4.Name = "rez_r4";
             this.rez_r4.Size = new System.Drawing.Size(13, 13);
             this.rez_r4.TabIndex = 29;
@@ -2230,7 +2270,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(38, 85);
+            this.label32.Location = new System.Drawing.Point(15, 105);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(85, 13);
             this.label32.TabIndex = 28;
@@ -2239,7 +2279,7 @@
             // rez_r3
             // 
             this.rez_r3.AutoSize = true;
-            this.rez_r3.Location = new System.Drawing.Point(138, 85);
+            this.rez_r3.Location = new System.Drawing.Point(115, 105);
             this.rez_r3.Name = "rez_r3";
             this.rez_r3.Size = new System.Drawing.Size(13, 13);
             this.rez_r3.TabIndex = 27;
@@ -2249,7 +2289,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(38, 64);
+            this.label10.Location = new System.Drawing.Point(15, 84);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(85, 13);
             this.label10.TabIndex = 26;
@@ -2258,7 +2298,7 @@
             // rez_r2
             // 
             this.rez_r2.AutoSize = true;
-            this.rez_r2.Location = new System.Drawing.Point(138, 64);
+            this.rez_r2.Location = new System.Drawing.Point(115, 84);
             this.rez_r2.Name = "rez_r2";
             this.rez_r2.Size = new System.Drawing.Size(13, 13);
             this.rez_r2.TabIndex = 25;
@@ -2279,7 +2319,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label63.Location = new System.Drawing.Point(38, 43);
+            this.label63.Location = new System.Drawing.Point(15, 63);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(85, 13);
             this.label63.TabIndex = 23;
@@ -2288,7 +2328,7 @@
             // rez_r1
             // 
             this.rez_r1.AutoSize = true;
-            this.rez_r1.Location = new System.Drawing.Point(138, 43);
+            this.rez_r1.Location = new System.Drawing.Point(115, 63);
             this.rez_r1.Name = "rez_r1";
             this.rez_r1.Size = new System.Drawing.Size(13, 13);
             this.rez_r1.TabIndex = 20;
@@ -2303,6 +2343,204 @@
             this.label59.Size = new System.Drawing.Size(139, 13);
             this.label59.TabIndex = 19;
             this.label59.Text = "Результаты расчетов:";
+            // 
+            // price6_L
+            // 
+            this.price6_L.AutoSize = true;
+            this.price6_L.Location = new System.Drawing.Point(161, 168);
+            this.price6_L.Name = "price6_L";
+            this.price6_L.Size = new System.Drawing.Size(13, 13);
+            this.price6_L.TabIndex = 42;
+            this.price6_L.Text = "0";
+            // 
+            // price5_L
+            // 
+            this.price5_L.AutoSize = true;
+            this.price5_L.Location = new System.Drawing.Point(161, 147);
+            this.price5_L.Name = "price5_L";
+            this.price5_L.Size = new System.Drawing.Size(13, 13);
+            this.price5_L.TabIndex = 41;
+            this.price5_L.Text = "0";
+            // 
+            // price4_L
+            // 
+            this.price4_L.AutoSize = true;
+            this.price4_L.Location = new System.Drawing.Point(161, 126);
+            this.price4_L.Name = "price4_L";
+            this.price4_L.Size = new System.Drawing.Size(13, 13);
+            this.price4_L.TabIndex = 40;
+            this.price4_L.Text = "0";
+            // 
+            // price3_L
+            // 
+            this.price3_L.AutoSize = true;
+            this.price3_L.Location = new System.Drawing.Point(161, 105);
+            this.price3_L.Name = "price3_L";
+            this.price3_L.Size = new System.Drawing.Size(13, 13);
+            this.price3_L.TabIndex = 39;
+            this.price3_L.Text = "0";
+            // 
+            // price2_L
+            // 
+            this.price2_L.AutoSize = true;
+            this.price2_L.Location = new System.Drawing.Point(161, 84);
+            this.price2_L.Name = "price2_L";
+            this.price2_L.Size = new System.Drawing.Size(13, 13);
+            this.price2_L.TabIndex = 38;
+            this.price2_L.Text = "0";
+            // 
+            // price1_L
+            // 
+            this.price1_L.AutoSize = true;
+            this.price1_L.Location = new System.Drawing.Point(161, 63);
+            this.price1_L.Name = "price1_L";
+            this.price1_L.Size = new System.Drawing.Size(13, 13);
+            this.price1_L.TabIndex = 37;
+            this.price1_L.Text = "0";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(161, 39);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(33, 13);
+            this.label47.TabIndex = 44;
+            this.label47.Text = "Цена";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(115, 39);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(32, 13);
+            this.label48.TabIndex = 43;
+            this.label48.Text = "Риск";
+            // 
+            // price1_L6
+            // 
+            this.price1_L6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.price1_L6.AutoSize = true;
+            this.price1_L6.Location = new System.Drawing.Point(491, 278);
+            this.price1_L6.Name = "price1_L6";
+            this.price1_L6.Size = new System.Drawing.Size(13, 13);
+            this.price1_L6.TabIndex = 54;
+            this.price1_L6.Text = "0";
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label18.Location = new System.Drawing.Point(336, 278);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(41, 13);
+            this.label18.TabIndex = 55;
+            this.label18.Text = "Цена:";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label21.Location = new System.Drawing.Point(336, 278);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 13);
+            this.label21.TabIndex = 57;
+            this.label21.Text = "Цена:";
+            // 
+            // price1_L5
+            // 
+            this.price1_L5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.price1_L5.AutoSize = true;
+            this.price1_L5.Location = new System.Drawing.Point(491, 278);
+            this.price1_L5.Name = "price1_L5";
+            this.price1_L5.Size = new System.Drawing.Size(13, 13);
+            this.price1_L5.TabIndex = 56;
+            this.price1_L5.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label36.Location = new System.Drawing.Point(336, 278);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(41, 13);
+            this.label36.TabIndex = 57;
+            this.label36.Text = "Цена:";
+            // 
+            // price1_L4
+            // 
+            this.price1_L4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.price1_L4.AutoSize = true;
+            this.price1_L4.Location = new System.Drawing.Point(491, 278);
+            this.price1_L4.Name = "price1_L4";
+            this.price1_L4.Size = new System.Drawing.Size(13, 13);
+            this.price1_L4.TabIndex = 56;
+            this.price1_L4.Text = "0";
+            // 
+            // label50
+            // 
+            this.label50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label50.Location = new System.Drawing.Point(336, 278);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(41, 13);
+            this.label50.TabIndex = 57;
+            this.label50.Text = "Цена:";
+            // 
+            // price1_L3
+            // 
+            this.price1_L3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.price1_L3.AutoSize = true;
+            this.price1_L3.Location = new System.Drawing.Point(491, 278);
+            this.price1_L3.Name = "price1_L3";
+            this.price1_L3.Size = new System.Drawing.Size(13, 13);
+            this.price1_L3.TabIndex = 56;
+            this.price1_L3.Text = "0";
+            // 
+            // label56
+            // 
+            this.label56.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label56.AutoSize = true;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label56.Location = new System.Drawing.Point(336, 278);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(41, 13);
+            this.label56.TabIndex = 57;
+            this.label56.Text = "Цена:";
+            // 
+            // price1_L2
+            // 
+            this.price1_L2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.price1_L2.AutoSize = true;
+            this.price1_L2.Location = new System.Drawing.Point(491, 278);
+            this.price1_L2.Name = "price1_L2";
+            this.price1_L2.Size = new System.Drawing.Size(13, 13);
+            this.price1_L2.TabIndex = 56;
+            this.price1_L2.Text = "0";
+            // 
+            // label66
+            // 
+            this.label66.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label66.AutoSize = true;
+            this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label66.Location = new System.Drawing.Point(336, 278);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(41, 13);
+            this.label66.TabIndex = 57;
+            this.label66.Text = "Цена:";
+            // 
+            // price1_L1
+            // 
+            this.price1_L1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.price1_L1.AutoSize = true;
+            this.price1_L1.Location = new System.Drawing.Point(491, 278);
+            this.price1_L1.Name = "price1_L1";
+            this.price1_L1.Size = new System.Drawing.Size(13, 13);
+            this.price1_L1.TabIndex = 56;
+            this.price1_L1.Text = "0";
             // 
             // Form1
             // 
@@ -2536,6 +2774,26 @@
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label price6_L;
+        private System.Windows.Forms.Label price5_L;
+        private System.Windows.Forms.Label price4_L;
+        private System.Windows.Forms.Label price3_L;
+        private System.Windows.Forms.Label price2_L;
+        private System.Windows.Forms.Label price1_L;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.Label price1_L1;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label price1_L2;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label price1_L3;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label price1_L4;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label price1_L5;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label price1_L6;
     }
 }
 

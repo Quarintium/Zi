@@ -62,6 +62,47 @@ namespace ZijaevPV
                 }
             }
             conn.Close();
+
+            q = @"select 0.8 *
+(select round((fun('" + uhd_t1_1.Text + "', " + s(numericUpDown1.Value) + ") + fun('" + uhd_t1_2.Text + "', " + s(numericUpDown2.Value) + ") + " +
+    "fun('" + k_t1_1.Text + "', " + s(numericUpDown3.Value) + ") + fun('" + k_t1_2.Text + "'," + s(numericUpDown4.Value) + ") + " +
+    "fun('" + s_t1_1.Text + "', " + s(numericUpDown5.Value) + ") + fun('" + s_t1_2.Text + "', " + s(numericUpDown6.Value) + @")) / 6.0, 2)) as top1,
+0.8 *
+(select round((fun('" + comboBox5.Text + "', " + s(numericUpDown12.Value) + ") + fun('" + comboBox6.Text + "', " + s(numericUpDown11.Value) + ") + " +
+    "fun('" + comboBox4.Text + "', " + s(numericUpDown10.Value) + ") + fun('" + comboBox3.Text + "'," + s(numericUpDown9.Value) + ") + " +
+    "fun('" + comboBox2.Text + "', " + s(numericUpDown8.Value) + @")) / 5.0, 2)) as top2,
+0.8 *
+(select round((fun('" + comboBox11.Text + "', " + s(numericUpDown18.Value) + ") + fun('" + comboBox12.Text + "', " + s(numericUpDown17.Value) + ") + " +
+    "fun('" + comboBox10.Text + "', " + s(numericUpDown16.Value) + ") + fun('" + comboBox8.Text + "'," + s(numericUpDown14.Value) + ") + " +
+    "fun('" + comboBox7.Text + "', " + s(numericUpDown13.Value) + @")) / 5.0, 2)) as top3,
+0.9 *
+(select round((fun('" + comboBox2.Text + "', " + s(numericUpDown24.Value) + ") + fun('" + comboBox16.Text + "', " + s(numericUpDown22.Value) + ") + " +
+    "fun('" + comboBox14.Text + "', " + s(numericUpDown21.Value) + ") + fun('" + comboBox13.Text + "'," + s(numericUpDown20.Value) + @")) / 4.0, 2)) as top4,
+0.8 *
+(select round((fun('" + comboBox24.Text + "', " + s(numericUpDown30.Value) + ") + fun('" + comboBox22.Text + "', " + s(numericUpDown28.Value) + ") + " +
+    "fun('" + comboBox21.Text + "', " + s(numericUpDown27.Value) + ") + fun('" + comboBox22.Text + "'," + s(numericUpDown26.Value) + @")) / 4.0, 2)) as top5,
+0.6 *
+(select round((fun('" + comboBox30.Text + "', " + s(numericUpDown36.Value) + ") + fun('" + comboBox29.Text + "', " + s(numericUpDown35.Value) + ") + " +
+    "fun('" + comboBox28.Text + "', " + s(numericUpDown34.Value) + ") + fun('" + comboBox27.Text + "'," + s(numericUpDown33.Value) + ") + " +
+    "fun('" + comboBox26.Text + "', " + s(numericUpDown32.Value) + ") + fun('" + comboBox25.Text + "', " + s(numericUpDown31.Value) + @")) / 6.0, 2)) as top6";
+            command2 = new NpgsqlCommand(q, conn);
+            conn.Open();
+            using (NpgsqlDataReader qqqq = command2.ExecuteReader())
+            {
+                if (qqqq.HasRows)
+                {
+                    foreach (DbDataRecord dbDataRecord in qqqq)
+                    {
+                        price1_L.Text = price1_L1.Text = Convert.ToString(dbDataRecord["top1"]);
+                        price2_L.Text = price1_L2.Text = Convert.ToString(dbDataRecord["top2"]);
+                        price3_L.Text = price1_L3.Text = Convert.ToString(dbDataRecord["top3"]);
+                        price4_L.Text = price1_L4.Text = Convert.ToString(dbDataRecord["top4"]);
+                        price5_L.Text = price1_L5.Text = Convert.ToString(dbDataRecord["top5"]);
+                        price6_L.Text = price1_L6.Text = Convert.ToString(dbDataRecord["top6"]);
+                    }
+                }
+            }
+            conn.Close();
         }
 
         string s(decimal f)

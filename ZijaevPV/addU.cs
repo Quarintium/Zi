@@ -57,7 +57,6 @@ namespace ZijaevPV
             conn.Open();
             command2.ExecuteNonQuery();
             conn.Close();
-
             Close();
         }
 
