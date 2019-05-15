@@ -8,12 +8,13 @@ namespace ZijaevPV
     public partial class Form1 : Form
     {
         string connStr = "Server=localhost;Port=5432;User=postgres;Password=Qwertasdfum12;Database=qwertyuio;";
+        bool fl = true;
         public Form1()
         {
             InitializeComponent();
 
-            NpgsqlConnection conn = new NpgsqlConnection(connStr);
-            NpgsqlCommand command2;
+            //NpgsqlConnection conn = new NpgsqlConnection(connStr);
+            //NpgsqlCommand command2;
             ReloadZn();
         }
 
@@ -169,16 +170,19 @@ namespace ZijaevPV
                         comboBox30.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox29.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
 
-                        uhd_t1_1.SelectedIndex = 0;
-                        uhd_t1_2.SelectedIndex = 0;
-                        comboBox5.SelectedIndex = 0;
-                        comboBox6.SelectedIndex = 0;
-                        comboBox11.SelectedIndex = 0;
-                        comboBox12.SelectedIndex = 0;
-                        comboBox18.SelectedIndex = 0;
-                        comboBox24.SelectedIndex = 0;
-                        comboBox30.SelectedIndex = 0;
-                        comboBox29.SelectedIndex = 0;
+                        if(fl)
+                        {
+                            uhd_t1_1.SelectedIndex = 0;
+                            uhd_t1_2.SelectedIndex = 0;
+                            comboBox5.SelectedIndex = 0;
+                            comboBox6.SelectedIndex = 0;
+                            comboBox11.SelectedIndex = 0;
+                            comboBox12.SelectedIndex = 0;
+                            comboBox18.SelectedIndex = 0;
+                            comboBox24.SelectedIndex = 0;
+                            comboBox30.SelectedIndex = 0;
+                            comboBox29.SelectedIndex = 0;
+                        }
                     }
                 }
             }
@@ -207,18 +211,22 @@ namespace ZijaevPV
                         comboBox27.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
 
 
-                        k_t1_1.SelectedIndex = 0;
-                        k_t1_2.SelectedIndex = 0;
+                        
 
-                        comboBox4.SelectedIndex = 0;
-                        comboBox3.SelectedIndex = 0;
-                        comboBox10.SelectedIndex = 0;
-                        comboBox16.SelectedIndex = 0;
-                        comboBox15.SelectedIndex = 0;
-                        comboBox22.SelectedIndex = 0;
-                        comboBox21.SelectedIndex = 0;
-                        comboBox28.SelectedIndex = 0;
-                        comboBox27.SelectedIndex = 0;
+                        if (fl)
+                        {
+                            k_t1_1.SelectedIndex = 0;
+                            k_t1_2.SelectedIndex = 0;
+                            comboBox4.SelectedIndex = 0;
+                            comboBox3.SelectedIndex = 0;
+                            comboBox10.SelectedIndex = 0;
+                            comboBox16.SelectedIndex = 0;
+                            comboBox15.SelectedIndex = 0;
+                            comboBox22.SelectedIndex = 0;
+                            comboBox21.SelectedIndex = 0;
+                            comboBox28.SelectedIndex = 0;
+                            comboBox27.SelectedIndex = 0;
+                        }
                     }
                 }
             }
@@ -248,42 +256,24 @@ namespace ZijaevPV
                         comboBox26.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox25.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
 
-                        comboBox2.SelectedIndex = 0;
-                        comboBox8.SelectedIndex = 0;
-                        comboBox7.SelectedIndex = 0;
-                        comboBox14.SelectedIndex = 0;
-                        comboBox13.SelectedIndex = 0;
-                        comboBox20.SelectedIndex = 0;
-                        comboBox26.SelectedIndex = 0;
-                        comboBox25.SelectedIndex = 0;
+
+                        if (fl)
+                        {
+                            comboBox2.SelectedIndex = 0;
+                            comboBox8.SelectedIndex = 0;
+                            comboBox7.SelectedIndex = 0;
+                            comboBox14.SelectedIndex = 0;
+                            comboBox13.SelectedIndex = 0;
+                            comboBox20.SelectedIndex = 0;
+                            comboBox26.SelectedIndex = 0;
+                            comboBox25.SelectedIndex = 0;
+                        }
                     }
                 }
             }
             conn.Close();
 
-
-            q = "select (select count(*) from elements_storage where type_of_e = 'дисковой массив') as uhd, ";
-            q += "(select count(*) from elements_storage where type_of_e = 'коммутатор') as komm, ";
-            q += "(select count(*) from elements_storage where type_of_e = 'сервер SAN') as serv, ";
-            q += "(select count(*) from vulnerability) as u, ";
-            q += "(select count(*) from threats) as ugr";
-            command2 = new NpgsqlCommand(q, conn);
-            conn.Open();
-            using (NpgsqlDataReader qqqq = command2.ExecuteReader())
-            {
-                if (qqqq.HasRows)
-                {
-                    foreach (DbDataRecord dbDataRecord in qqqq)
-                    {
-                        countUHD_L.Text = Convert.ToString(dbDataRecord["uhd"]);
-                        countComm_L.Text = Convert.ToString(dbDataRecord["komm"]);
-                        countServer_L.Text = Convert.ToString(dbDataRecord["serv"]);
-                        countU_L.Text = Convert.ToString(dbDataRecord["u"]);
-                        countUgr_L.Text = Convert.ToString(dbDataRecord["ugr"]);
-                    }
-                }
-            }
-            conn.Close();
+            fl = false;
         }
 
         private void addKomm_B_Click(object sender, EventArgs e)
