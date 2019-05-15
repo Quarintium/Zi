@@ -149,6 +149,7 @@ namespace ZijaevPV
             comboBox28.Items.Clear();
             comboBox27.Items.Clear();
 
+            // Возможно где-то тут закралась ошикба
             q = "select * from elements_storage where type_of_e = 'дисковой массив'";
             command2 = new NpgsqlCommand(q, conn);
             conn.Open();
@@ -160,7 +161,6 @@ namespace ZijaevPV
                     {
                         uhd_t1_1.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         uhd_t1_2.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
-
                         comboBox5.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox6.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox11.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
@@ -169,7 +169,6 @@ namespace ZijaevPV
                         comboBox24.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox30.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox29.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
-
                         if(fl)
                         {
                             uhd_t1_1.SelectedIndex = 0;
@@ -199,7 +198,6 @@ namespace ZijaevPV
                     {
                         k_t1_1.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         k_t1_2.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
-
                         comboBox4.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox3.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox10.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
@@ -209,10 +207,6 @@ namespace ZijaevPV
                         comboBox21.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox28.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
                         comboBox27.Items.Add(Convert.ToString(dbDataRecord["name_e"]));
-
-
-                        
-
                         if (fl)
                         {
                             k_t1_1.SelectedIndex = 0;
@@ -231,8 +225,6 @@ namespace ZijaevPV
                 }
             }
             conn.Close();
-
-
             q = "select * from elements_storage where type_of_e = 'сервер SAN'";
             command2 = new NpgsqlCommand(q, conn);
             conn.Open();
