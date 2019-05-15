@@ -217,6 +217,7 @@
             this.price1_L2 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
             this.price1_L1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dfgh.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -265,6 +266,7 @@
             this.tabPage8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dfgh
@@ -513,6 +515,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.label66);
             this.tabPage2.Controls.Add(this.price1_L1);
             this.tabPage2.Controls.Add(this.numericUpDown6);
@@ -2183,13 +2186,13 @@
             this.chart2.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(201, 193);
+            this.chart2.Location = new System.Drawing.Point(254, 193);
             this.chart2.Name = "chart2";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(448, 193);
+            this.chart2.Size = new System.Drawing.Size(395, 193);
             this.chart2.TabIndex = 36;
             this.chart2.Text = "chart2";
             // 
@@ -2199,13 +2202,13 @@
             this.chart1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(201, 8);
+            this.chart1.Location = new System.Drawing.Point(254, 8);
             this.chart1.Name = "chart1";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(448, 193);
+            this.chart1.Size = new System.Drawing.Size(395, 193);
             this.chart1.TabIndex = 35;
             this.chart1.Text = "chart1";
             // 
@@ -2346,62 +2349,62 @@
             // 
             // price6_L
             // 
-            this.price6_L.AutoSize = true;
-            this.price6_L.Location = new System.Drawing.Point(161, 168);
+            this.price6_L.Location = new System.Drawing.Point(154, 168);
             this.price6_L.Name = "price6_L";
-            this.price6_L.Size = new System.Drawing.Size(13, 13);
+            this.price6_L.Size = new System.Drawing.Size(70, 13);
             this.price6_L.TabIndex = 42;
             this.price6_L.Text = "0";
+            this.price6_L.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // price5_L
             // 
-            this.price5_L.AutoSize = true;
-            this.price5_L.Location = new System.Drawing.Point(161, 147);
+            this.price5_L.Location = new System.Drawing.Point(154, 147);
             this.price5_L.Name = "price5_L";
-            this.price5_L.Size = new System.Drawing.Size(13, 13);
+            this.price5_L.Size = new System.Drawing.Size(70, 13);
             this.price5_L.TabIndex = 41;
             this.price5_L.Text = "0";
+            this.price5_L.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // price4_L
             // 
-            this.price4_L.AutoSize = true;
-            this.price4_L.Location = new System.Drawing.Point(161, 126);
+            this.price4_L.Location = new System.Drawing.Point(154, 126);
             this.price4_L.Name = "price4_L";
-            this.price4_L.Size = new System.Drawing.Size(13, 13);
+            this.price4_L.Size = new System.Drawing.Size(70, 13);
             this.price4_L.TabIndex = 40;
             this.price4_L.Text = "0";
+            this.price4_L.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // price3_L
             // 
-            this.price3_L.AutoSize = true;
-            this.price3_L.Location = new System.Drawing.Point(161, 105);
+            this.price3_L.Location = new System.Drawing.Point(154, 105);
             this.price3_L.Name = "price3_L";
-            this.price3_L.Size = new System.Drawing.Size(13, 13);
+            this.price3_L.Size = new System.Drawing.Size(70, 13);
             this.price3_L.TabIndex = 39;
             this.price3_L.Text = "0";
+            this.price3_L.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // price2_L
             // 
-            this.price2_L.AutoSize = true;
-            this.price2_L.Location = new System.Drawing.Point(161, 84);
+            this.price2_L.Location = new System.Drawing.Point(154, 84);
             this.price2_L.Name = "price2_L";
-            this.price2_L.Size = new System.Drawing.Size(13, 13);
+            this.price2_L.Size = new System.Drawing.Size(70, 13);
             this.price2_L.TabIndex = 38;
             this.price2_L.Text = "0";
+            this.price2_L.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // price1_L
             // 
-            this.price1_L.AutoSize = true;
-            this.price1_L.Location = new System.Drawing.Point(161, 63);
+            this.price1_L.Location = new System.Drawing.Point(154, 63);
             this.price1_L.Name = "price1_L";
-            this.price1_L.Size = new System.Drawing.Size(13, 13);
+            this.price1_L.Size = new System.Drawing.Size(70, 13);
             this.price1_L.TabIndex = 37;
             this.price1_L.Text = "0";
+            this.price1_L.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(161, 39);
+            this.label47.Location = new System.Drawing.Point(175, 39);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(33, 13);
             this.label47.TabIndex = 44;
@@ -2542,6 +2545,16 @@
             this.price1_L1.TabIndex = 56;
             this.price1_L1.Text = "0";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(8, 294);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(641, 121);
+            this.dataGridView1.TabIndex = 58;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2606,6 +2619,7 @@
             this.tabPage8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2794,6 +2808,7 @@
         private System.Windows.Forms.Label price1_L5;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label price1_L6;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
