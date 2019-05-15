@@ -220,6 +220,7 @@ namespace ZijaevPV
         // Добавление дисковых массивов в базу данных
         private void addUXD_B_Click(object sender, EventArgs e)
         {
+            // Инициализация формы добавления дисковых массивов в базу данных
             addElement f = new addElement("дисковой массив");
             f.ShowDialog();
             ReloadZn();
