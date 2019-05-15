@@ -217,6 +217,7 @@ namespace ZijaevPV
         {
         }
 
+        // Добавление дисковых массивов в базу данных
         private void addUXD_B_Click(object sender, EventArgs e)
         {
             addElement f = new addElement("дисковой массив");
