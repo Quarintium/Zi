@@ -1,0 +1,17 @@
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\bin\Debug\ZijaevPV.exe
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\bin\Debug\ZijaevPV.pdb
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.csprojResolveAssemblyReference.cache
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.Form1.resources
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.Properties.Resources.resources
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.csproj.GenerateResource.Cache
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.exe
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.pdb
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.addElement.resources
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.addU.resources
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\obj\Debug\ZijaevPV.addUgr.resources
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\bin\Debug\Mono.Security.dll
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Alex\source\repos\ZijaevPV\ZijaevPV\bin\Debug\Npgsql.dll
